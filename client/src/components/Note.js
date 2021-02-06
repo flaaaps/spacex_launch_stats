@@ -5,10 +5,9 @@ function Note() {
     const [showModal, setShowModal] = useState(true);
     return (
         <div
-            className={classNames("alert", "alert-warning", "alert-dismissible", "fade", "my-4", "fixed-bottom", "position-fixed", {
+            className={classNames("alert", "alert-warning", "alert-dismissible", "fade", "fixed-bottom", "position-fixed", {
                 show: showModal,
             })}
-            style={{ width: "95%" }}
             role="alert"
         >
             <strong>Note!</strong> This page isn't hosted by{" "}
