@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.alert {
+    width: calc(100% - 40px);
+    margin: 20px;
+}
+
+@media (min-width: 800px) {
+    .alert {
+        width: 500px;
+        margin-left: auto;
+    }
+}
