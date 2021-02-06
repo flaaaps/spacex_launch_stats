@@ -29,7 +29,7 @@ function Launches() {
 
     function updateItemsOrder() {
         setLaunchItems(launchItems.reverse());
-        setLaunchItemsOrder((prevLaunchItemsOrder) => (prevLaunchItemsOrder === "asc" ? "desc" : "asc"));
+        setLaunchItemsOrder(prevLaunchItemsOrder => (prevLaunchItemsOrder === "asc" ? "desc" : "asc"));
     }
 
     return (
@@ -41,8 +41,8 @@ function Launches() {
                 {launchItemsOrder === "asc" ? "Ascending" : "Descending"}
             </button>
             <Fragment>
-                {launchItems.map((launch) => (
-                    <LaunchItem key={launch.flight_number} launch={launch} />
+                {launchItems.map(launch => (
+                    <LaunchItem key={launch.flight_number + launch.mission_name} launch={launch} />
                 ))}
             </Fragment>
         </Fragment>

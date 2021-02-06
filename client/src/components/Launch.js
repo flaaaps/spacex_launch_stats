@@ -9,9 +9,11 @@ const LAUNCH_QUERY = gql`
         launch(flight_number: $flight_number) {
             flight_number
             mission_name
+            mission_patch
             launch_year
             launch_success
             launch_date_local
+            launch_site
             rocket {
                 rocket_id
                 rocket_name
@@ -37,6 +39,8 @@ export class Launch extends Component {
                             flight_number,
                             launch_year,
                             launch_success,
+                            launch_site,
+                            mission_patch,
                             rocket: { rocket_id, rocket_name, rocket_type },
                         } = data.launch;
 
@@ -45,10 +49,12 @@ export class Launch extends Component {
                                 <h1 className="display-4 my-3">
                                     <span className="text-dark">Mission:</span> {mission_name}
                                 </h1>
+                                {mission_patch && <img width="150" alt={mission_name} src={mission_patch} />}
                                 <h4 className="mb-3">Launch Details</h4>
                                 <ul className="list-group">
                                     <li className="list-group-item">Flight Number: {flight_number}</li>
                                     <li className="list-group-item">Launch Year: {launch_year}</li>
+                                    <li className="list-group-item">Launch Site: {launch_site}</li>
                                     <li className="list-group-item">
                                         Launch Successful:{" "}
                                         <span
