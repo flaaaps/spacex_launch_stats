@@ -25,8 +25,8 @@ function Note() {
 				Traversy Media
 			</a>{' '}
 			anymore, it is a modified version of Brad's React GraphQL{' '}
-			<a href="https://www.youtube.com/watch?v=SEMTj8w04Z8" target="_blank" rel="noreferrer">
-				tutorial
+			<a href="https://www.youtube.com/playlist?list=PLillGF-RfqbZrjw48EXLdM4dsOhURCLZx" target="_blank" rel="noreferrer">
+				course
 			</a>
 			. If you (Brad) do not like this idea, please contact me on{' '}
 			<a href="https://twitter.com/jvliix" target="_blank" rel="noreferrer">
