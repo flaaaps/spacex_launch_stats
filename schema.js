@@ -8,10 +8,18 @@ const LaunchType = new GraphQLObjectType({
     fields: () => ({
         flight_number: { type: GraphQLInt },
         mission_name: { type: GraphQLString },
+        mission_patch: {
+            type: GraphQLString,
+            resolve: (parent, args) => parent.links.mission_patch_small,
+        },
         launch_year: { type: GraphQLString },
         launch_date_local: { type: GraphQLString },
         launch_success: { type: GraphQLBoolean },
         rocket: { type: RocketType },
+        launch_site: {
+            type: GraphQLString,
+            resolve: (parent, args) => parent.launch_site.site_name_long,
+        },
     }),
 });
 
